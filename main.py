@@ -20,7 +20,7 @@ def print_section(text):
 
 def get_user_input():
     """Get trip preferences from user"""
-    print_header("🌴 WELCOME TO SRI LANKA TRIP PLANNER 🇱🇰")
+    print_header(" WELCOME TO SRI LANKA TRIP PLANNER 🇱")
     print("\nPlan your perfect Sri Lankan adventure with AI-powered optimization!")
     print("Using: Neural Networks + Genetic Algorithm + Hybrid Recommendations\n")
     
@@ -33,9 +33,9 @@ def get_user_input():
             if 3 <= num_days <= 14:
                 break
             else:
-                print("❌ Please enter a number between 3 and 14")
+                print(" Please enter a number between 3 and 14")
         except ValueError:
-            print("❌ Please enter a valid number")
+            print(" Please enter a valid number")
     
     # Get budget
     print_section("💰 BUDGET")
@@ -47,9 +47,9 @@ def get_user_input():
             if 100 <= budget <= 2000:
                 break
             else:
-                print("❌ Please enter a budget between $100 and $2000")
+                print(" Please enter a budget between $100 and $2000")
         except ValueError:
-            print("❌ Please enter a valid number")
+            print(" Please enter a valid number")
     
     # Get adventure types
     print_section("🎯 ADVENTURE PREFERENCES")
@@ -82,12 +82,12 @@ def get_user_input():
         selections = [s.strip() for s in selections if s.strip()]
         
         if not selections:
-            print("❌ Please select at least one adventure type")
+            print(" Please select at least one adventure type")
             continue
         
         invalid = [s for s in selections if s not in adventure_map]
         if invalid:
-            print(f"❌ Invalid selection(s): {', '.join(invalid)}")
+            print(f" Invalid selection(s): {', '.join(invalid)}")
             continue
         
         adventure_types = [adventure_map[s] for s in selections]
@@ -114,9 +114,9 @@ def get_user_input():
             if 1 <= travel_month <= 12:
                 break
             else:
-                print("❌ Please enter a number between 1 and 12")
+                print(" Please enter a number between 1 and 12")
         except ValueError:
-            print("❌ Please enter a valid number")
+            print(" Please enter a valid number")
     
     # Get optimization level
     print_section("⚙️  OPTIMIZATION SETTINGS")
@@ -135,7 +135,7 @@ def get_user_input():
             optimization_level = opt_map[opt_input]
             break
         else:
-            print("❌ Please enter 1, 2, or 3")
+            print(" Please enter 1, 2, or 3")
     
     return {
         'num_days': num_days,
@@ -171,7 +171,7 @@ def main():
         
         # Display summary and confirm
         if not display_summary(preferences):
-            print("\n❌ Trip planning cancelled. Run the program again to start over.")
+            print("\n Trip planning cancelled. Run the program again to start over.")
             return
         
         # Initialize planner
@@ -231,10 +231,10 @@ def main():
             print("\nHave an amazing journey! 🌴🇱🇰✨\n")
     
     except KeyboardInterrupt:
-        print("\n\n❌ Trip planning cancelled by user.")
+        print("\n\n Trip planning cancelled by user.")
         sys.exit(0)
     except Exception as e:
-        print(f"\n\n❌ An error occurred: {str(e)}")
+        print(f"\n\n An error occurred: {str(e)}")
         print("Please try again or contact support.")
         sys.exit(1)
 
