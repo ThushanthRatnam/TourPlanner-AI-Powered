@@ -1,0 +1,82 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtualenvs
+venv/
+.venv/
+env/
+env.bak/
+venv*/
+
+# Pip / build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+*.whl
+pip-log.txt
+
+# Python caches / tooling
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Python model artifacts & serialized data
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.joblib
+*.pkl
+*.model
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+# frontend build outputs
+frontend/dist/
+dist/
+
+# Environment / secrets
+.env
+.env.*
+local_settings.py
+*.pem
+*.key
+
+# Docker / deployment local overrides
+docker-compose.override.yml
+
+# Database / local state
+*.sqlite3
+*.db
+*.sqlite
+
+# Misc
+*.pyc
+*.pyo
+*.pyd
+*.swp
